@@ -151,5 +151,5 @@ function do_set_model()
     done
 }
 
-do_set_model
-
+#do_set_model
+do_set_model_to_json 10
