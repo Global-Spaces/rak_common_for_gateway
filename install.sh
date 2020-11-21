@@ -86,22 +86,24 @@ set +e
 write_json_chirpstack_install $INSTALL_CHIRPSTACK
 set -e
 
-pushd ap
-./install.sh $CREATE_IMG
-sleep 1
-popd
+# None of this is useful to GS at this time: 
 
-if [ "$INSTALL_CHIRPSTACK" = 1 ]; then
-    pushd chirpstack
-    ./install.sh $CREATE_IMG
-    sleep 1
-    popd
-fi
-
-pushd lte
-./install.sh $CREATE_IMG
-sleep 1
-popd
+#pushd ap
+#./install.sh $CREATE_IMG
+#sleep 1
+#popd
+#
+#if [ "$INSTALL_CHIRPSTACK" = 1 ]; then
+#    pushd chirpstack
+#    ./install.sh $CREATE_IMG
+#    sleep 1
+#    popd
+#fi
+#
+#pushd lte
+#./install.sh $CREATE_IMG
+#sleep 1
+#popd
 
 pushd lora
 ./install.sh $CREATE_IMG
