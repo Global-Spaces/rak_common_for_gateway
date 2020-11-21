@@ -13,7 +13,7 @@ if [ $UID != 0 ]; then
     exit 1
 fi
 
-if [[ $NEW_HOSTNAME == "" ]]; then NEW_HOSTNAME="rak-gateway"; fi
+if [[ $NEW_HOSTNAME == "" ]]; then NEW_HOSTNAME="edgewise-lora"; fi
 # Change hostname if needed
 CURRENT_HOSTNAME=$(hostname)
 
@@ -39,6 +39,7 @@ cp motd /etc/motd -f
 CMD_STR=`cat /boot/cmdline.txt`
 echo "$CMD_STR modules-load=dwc2,g_ether" > /boot/cmdline.txt
 
-./set_ip.sh $img
+# GS Lets not mess with the IP settings for the time being
+# ./set_ip.sh $img
 
 echo_success "Copy sys_config file success!"
