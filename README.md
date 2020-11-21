@@ -1,5 +1,9 @@
 # rak_common_for_gateway
 
+##    Global Spaces Gateway
+
+This is forked from the RAK Wireless repo.  Various changes made to suit our use
+
 ##	Introduction 
 
 The aim of this project is to help users set up a LoRa network easily. The User Guide can be get from our Web.
